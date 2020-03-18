@@ -6,7 +6,7 @@ RUN set -ex; \
 	$PHPIZE_DEPS \
 	libmcrypt-dev libjpeg-turbo-dev libpng-dev freetype-dev; \
 	\
-	pecl install redis; \
+	pecl install redis-4.3.0; \
 	docker-php-ext-enable redis; \
 	\
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr --with-freetype-dir=/usr; \
