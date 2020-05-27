@@ -2,9 +2,9 @@ FROM wordpress:php5.6-fpm-alpine
 
 RUN set -ex; \
 	\
-	apk add --no-cache --virtual .build-deps \
-	$PHPIZE_DEPS \
-	libmcrypt-dev libjpeg-turbo-dev libpng-dev freetype-dev; \
+	apk add --no-cache --virtual .build-deps $PHPIZE_DEPS; \
+	\
+	apk add --no-cache libmcrypt-dev libjpeg-turbo-dev libpng-dev freetype-dev; \
 	\
 	pecl install redis-4.3.0; \
 	docker-php-ext-enable redis; \
