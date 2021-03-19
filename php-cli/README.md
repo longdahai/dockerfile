@@ -1,8 +1,8 @@
-# php fpm base wordpress image
+# php cli base php cli alpine image
 
 add ext
 - redis
 - swoole
 - pdo_mysql bcmath sockets
-- gd
+- gd with png jpeg webp
 - pcntl
