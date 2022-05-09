@@ -10,6 +10,8 @@ RUN set -ex; \
 	\
 	pecl install redis && docker-php-ext-enable redis; \
 	\
+	pecl install memcached && docker-php-ext-enable memcached; \
+	\
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr --with-freetype-dir=/usr; \
 	docker-php-ext-install gd; \
 	\
